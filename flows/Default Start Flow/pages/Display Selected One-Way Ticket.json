@@ -15,9 +15,14 @@
   "transitionRoutes": [ {
     "intent": "small_talk.confirmation.yes",
     "triggerFulfillment": {
-    
+      "messages": [ {
+        "text": {
+          "text": [ "Thank you. I have booked your flight departing from $session.params.departure_airport to $session.params.arrival_airport on $session.params.departure_date.\nYour reservation number is EFG435. \nYour confirmation details have been sent to $session.params.passenger_email." ]
+        },
+        "languageCode": "en"
+      } ]
     },
-    "targetPage": "One-Way Payment",
+    "targetPage": "Anything Else",
     "name": "5f36ab46-0000-210f-859a-f403043d09f0"
   }, {
     "intent": "small_talk.confirmation.no",

@@ -17,12 +17,12 @@
     "triggerFulfillment": {
       "messages": [ {
         "text": {
-          "text": [ "Great!\n" ]
+          "text": [ "Thank you. I have booked your flight departing from $.session.params.departure_airport on $.session.params.departure_date and returning from $.session.params. return_airport on $.session.params.return_date. \nYour reservation number is ABC123. \nYour confirmation details have been sent to $.session.params.email." ]
         },
         "languageCode": "en"
       } ]
     },
-    "targetPage": "Round-Trip Payment",
+    "targetPage": "Anything Else",
     "name": "5f36ab3f-0000-210f-859a-f403043d09f0"
   }, {
     "intent": "small_talk.confirmation.no",

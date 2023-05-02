@@ -345,7 +345,7 @@
         "name": "small_talk.confirmation.yes"
       },
       "currentPage": {
-        "name": "One-Way Payment",
+        "name": "ac096a35-305d-4e49-bc0a-087867e5aa06",
         "flow": "Default Start Flow"
       },
       "textResponses": [ {
@@ -386,7 +386,7 @@
         "passenger_name": "Jane Doe"
       },
       "currentPage": {
-        "name": "One-Way Payment",
+        "name": "ac096a35-305d-4e49-bc0a-087867e5aa06",
         "flow": "Default Start Flow"
       },
       "textResponses": [ {
@@ -428,7 +428,7 @@
         "passenger_name": "Jane Doe"
       },
       "currentPage": {
-        "name": "One-Way Payment",
+        "name": "ac096a35-305d-4e49-bc0a-087867e5aa06",
         "flow": "Default Start Flow"
       },
       "textResponses": [ {
@@ -471,7 +471,7 @@
         "passenger_name": "Jane Doe"
       },
       "currentPage": {
-        "name": "One-Way Payment",
+        "name": "ac096a35-305d-4e49-bc0a-087867e5aa06",
         "flow": "Default Start Flow"
       },
       "textResponses": [ {
@@ -515,7 +515,7 @@
         "passenger_name": "Jane Doe"
       },
       "currentPage": {
-        "name": "One-Way Payment",
+        "name": "ac096a35-305d-4e49-bc0a-087867e5aa06",
         "flow": "Default Start Flow"
       },
       "textResponses": [ {
@@ -560,7 +560,7 @@
         "passenger_name": "Jane Doe"
       },
       "currentPage": {
-        "name": "One-Way Ticket Purchase Confirmation",
+        "name": "02828e4a-a549-47c1-8025-a857a9f66f71",
         "flow": "Default Start Flow"
       },
       "textResponses": [ {

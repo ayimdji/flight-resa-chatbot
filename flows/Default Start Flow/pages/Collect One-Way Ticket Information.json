@@ -10,12 +10,17 @@
         "initialPromptFulfillment": {
           "messages": [ {
             "text": {
-              "text": [ "Which day would you like to leave?", "Which date do you want to fly?" ]
+              "text": [ "Which day would you like to leave?", "Which date do you want to fly?", "When are you planning to travel?" ]
             },
             "languageCode": "en"
           } ],
           "webhook": "Apigee Integration",
           "tag": "findAvailableTicket"
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
         }
       }
     }, {
@@ -104,12 +109,17 @@
         "initialPromptFulfillment": {
           "messages": [ {
             "text": {
-              "text": [ "What time would you like to leave? Please use AM and PM in your response. " ]
+              "text": [ "What time would you like to leave? Please use AM and PM in your response. ", "What’s your preferred departure time? \nPlease use AM and PM in your response. " ]
             },
             "languageCode": "en"
           } ],
           "webhook": "Apigee Integration",
           "tag": "findAvailableTicket"
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
         }
       }
     }, {
@@ -120,12 +130,36 @@
         "initialPromptFulfillment": {
           "messages": [ {
             "text": {
-              "text": [ "What is the first  and last name of the passenger flying?" ]
+              "text": [ "What is the first  and last name of the passenger flying?", "Great! Can you please provide the name of the passenger?" ]
             },
             "languageCode": "en"
           } ],
           "webhook": "Apigee Integration",
           "tag": "findAvailableTicket"
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    }, {
+      "displayName": "passenger_email",
+      "required": true,
+      "entityType": "@sys.email",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Sounds good! Can you please provide an email address for the booking confirmation?" ]
+            },
+            "languageCode": "en"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
         }
       }
     } ]

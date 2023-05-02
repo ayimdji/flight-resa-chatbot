@@ -7,7 +7,7 @@
   "entryFulfillment": {
     "messages": [ {
       "text": {
-        "text": [ "You want a one way ticket for:\n\nPassenger $session.params.passenger_name \n\nFrom $session.params.departure_airport\n\nTo  $session.params.arrival_airport\n\nLeaving on $session.params.departure_date \n\nTime $session.params.outbound_departure_time\n\nIs that correct?\n" ]
+        "text": [ "You want a one way ticket for:\n\nPassenger $session.params.passenger_name \n\nFrom $session.params.departure_airport\n\nTo  $session.params.arrival_airport\n\nLeaving on $session.params.departure_date \n\nTime $session.params.outbound_departure_time\n\nIs that correct?\n", "This is to confirm that $session.params.passenger_name will be flying from $session.params.departure_airport to $session.params.arrival_airport\n on $session.params.departure_date at $session.params.outbound_departure_time. Is that correct?" ]
       },
       "languageCode": "en"
     } ]

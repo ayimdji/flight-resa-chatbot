@@ -17,7 +17,7 @@
     "triggerFulfillment": {
       "messages": [ {
         "text": {
-          "text": [ "Let's find a one-way ticket for you. " ]
+          "text": [ "Great! Let's find a one-way ticket for you. " ]
         },
         "languageCode": "en"
       } ]

@@ -10,7 +10,7 @@
         "initialPromptFulfillment": {
           "messages": [ {
             "text": {
-              "text": [ "Which day would you like to leave?", "Which date do you want to fly?", "Great! When are you planning to travel?" ]
+              "text": [ "Which day would you like to leave?", "Which date do you want to fly?", "When are you planning to travel?" ]
             },
             "languageCode": "en"
           } ]
@@ -90,7 +90,7 @@
         "initialPromptFulfillment": {
           "messages": [ {
             "text": {
-              "text": [ "What is the name of the airport you would like to fly to?", "Okay, what is your destination?" ]
+              "text": [ "What is the name of the airport you would like to fly to?", "Okay, what is your destination airport?" ]
             },
             "languageCode": "en"
           } ]
@@ -132,7 +132,7 @@
         "initialPromptFulfillment": {
           "messages": [ {
             "text": {
-              "text": [ "Which date will you return from session.params.return_airport  ?", "What is your return date from session.params.return_airport ?", "Great! When are you planning to return from session.params.return_airport ?" ]
+              "text": [ "Which date will you return from $session.params.return_airport  ?", "What is your return date from $session.params.return_airport ?", "Great! When are you planning to return from $session.params.return_airport ?" ]
             },
             "languageCode": "en"
           } ]
@@ -170,7 +170,7 @@
         "initialPromptFulfillment": {
           "messages": [ {
             "text": {
-              "text": [ "What is the first and last name of the passenger flying?" ]
+              "text": [ "What is the first and last name of the passenger flying?", "Great! Can you please provide the name of the passenger?" ]
             },
             "languageCode": "en"
           } ]

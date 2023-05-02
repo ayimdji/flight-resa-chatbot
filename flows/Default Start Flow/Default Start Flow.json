@@ -29,7 +29,7 @@
     "triggerFulfillment": {
       "messages": [ {
         "text": {
-          "text": [ "I can help you find a ticket. Let's get started.", "Hello! I can help you with that! Let’s start with your ticket type. " ]
+          "text": [ "I can help you find a ticket. Let's get started.", "Absolutely! I'd be happy to help you with that. " ]
         },
         "languageCode": "en"
       } ]

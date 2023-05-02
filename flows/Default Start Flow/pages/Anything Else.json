@@ -12,7 +12,7 @@
     "triggerFulfillment": {
       "messages": [ {
         "text": {
-          "text": [ "Thank you for contacting the virtual flights agent. Enjoy your flight and have a great day!\n", "We thank you for your business. Have a great day!\n" ]
+          "text": [ "Thank you for contacting the virtual flights agent. Enjoy your flight and have a great day!\n", "We thank you for your business. Have a great day!\n", "Thank you. Have a wonderful trip!" ]
         },
         "languageCode": "en"
       } ]
