@@ -1,73 +1,17 @@
 {
-  "name": "54b0f9c0-22b4-47a6-a68d-f47bec2bb229",
-  "displayName": "Error handling - No match testing",
+  "name": "0f9aacd5-0bf8-45e7-b96a-0756f1b6b2a4",
+  "displayName": "Conversation 3 - Error handling - Book one way ticket - No payment",
   "testCaseConversationTurns": [ {
     "userInput": {
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "hello"
+          "text": "Hi, I need to book a flight"
         },
         "languageCode": "en"
       }
     },
     "virtualAgentOutput": {
-      "triggeredIntent": {
-        "name": "Default Welcome Intent"
-      },
-      "currentPage": {
-        "name": "Start Page",
-        "flow": "Default Start Flow"
-      },
-      "textResponses": [ {
-        "text": [ "Hi! I'm the virtual flights agent. I can help you book a flight or assist with our frequent flyer program. How can I assist you today?" ]
-      } ],
-      "currentFlow": {
-        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
-        "displayName": "Default Start Flow"
-      }
-    }
-  }, {
-    "userInput": {
-      "isWebhookEnabled": true,
-      "input": {
-        "text": {
-          "text": "can you help me"
-        },
-        "languageCode": "en"
-      }
-    },
-    "virtualAgentOutput": {
-      "triggeredIntent": {
-        "name": "flights.frequent_flyer_club"
-      },
-      "currentPage": {
-        "name": "88e1a7c7-38fd-4de8-86fd-a371cd8f3807",
-        "flow": "Default Start Flow"
-      },
-      "textResponses": [ {
-        "text": [ "Do you have already have a frequent flyer account with us?" ]
-      } ],
-      "currentFlow": {
-        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
-        "displayName": "Default Start Flow"
-      }
-    }
-  }, {
-    "userInput": {
-      "isWebhookEnabled": true,
-      "input": {
-        "text": {
-          "text": "how much is the ticket from New York to London?"
-        },
-        "languageCode": "en"
-      }
-    },
-    "virtualAgentOutput": {
-      "sessionParameters": {
-        "airport-codes": [ "London" ],
-        "departure_city": [ "@airport-codes" ]
-      },
       "triggeredIntent": {
         "name": "flights.book_flight"
       },
@@ -78,7 +22,7 @@
       "textResponses": [ {
         "text": [ "I can help you find a ticket. Let's get started." ]
       }, {
-        "text": [ "Do you want a round-trip or one-way ticket?" ]
+        "text": [ "Are you looking for a one-way or round-trip ticket?" ]
       } ],
       "currentFlow": {
         "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
@@ -90,15 +34,13 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "one way only"
+          "text": "one way"
         },
         "languageCode": "en"
       }
     },
     "virtualAgentOutput": {
       "sessionParameters": {
-        "airport-codes": [ "London" ],
-        "departure_city": [ "@airport-codes" ],
         "flight-type": [ "one-way" ]
       },
       "triggeredIntent": {
@@ -109,9 +51,9 @@
         "flow": "Default Start Flow"
       },
       "textResponses": [ {
-        "text": [ "Let's find a one-way ticket for you. " ]
+        "text": [ "Great! Let's find a one-way ticket for you. " ]
       }, {
-        "text": [ "Which day would you like to leave?" ]
+        "text": [ "When are you planning to travel?" ]
       } ],
       "currentFlow": {
         "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
@@ -123,19 +65,17 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "Christmas day"
+          "text": "May 20"
         },
         "languageCode": "en"
       }
     },
     "virtualAgentOutput": {
       "sessionParameters": {
-        "airport-codes": [ "London" ],
-        "departure_city": [ "@airport-codes" ],
         "departure_date": {
-          "day": 25,
-          "month": 12,
-          "year": 2021
+          "day": 20,
+          "month": 5,
+          "year": 2023
         },
         "flight-type": [ "one-way" ]
       },
@@ -156,20 +96,18 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "New York Kennedy airport"
+          "text": "Tokyo"
         },
         "languageCode": "en"
       }
     },
     "virtualAgentOutput": {
       "sessionParameters": {
-        "airport-codes": [ "London" ],
-        "departure_airport": "JFK\t",
-        "departure_city": [ "@airport-codes" ],
+        "departure_airport": "HND",
         "departure_date": {
-          "day": 25,
-          "month": 12,
-          "year": 2021
+          "day": 20,
+          "month": 5,
+          "year": 2023
         },
         "flight-type": [ "one-way" ]
       },
@@ -178,7 +116,7 @@
         "flow": "Default Start Flow"
       },
       "textResponses": [ {
-        "text": [ "Which airport are you flying into?" ]
+        "text": [ "What’s your preferred departure time? \nPlease use AM and PM in your response. " ]
       } ],
       "currentFlow": {
         "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
@@ -190,129 +128,22 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "Hithrow"
+          "text": "10am"
         },
         "languageCode": "en"
       }
     },
     "virtualAgentOutput": {
       "sessionParameters": {
-        "airport-codes": [ "London" ],
-        "departure_airport": "JFK\t",
-        "departure_city": [ "@airport-codes" ],
+        "departure_airport": "HND",
         "departure_date": {
-          "day": 25,
-          "month": 12,
-          "year": 2021
-        },
-        "flight-type": [ "one-way" ]
-      },
-      "currentPage": {
-        "name": "Collect One-Way Ticket Information",
-        "flow": "Default Start Flow"
-      },
-      "textResponses": [ {
-        "text": [ "If you need time to look up the airport name, feel free to come back to the agent after you are ready to proceed." ]
-      } ],
-      "currentFlow": {
-        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
-        "displayName": "Default Start Flow"
-      }
-    }
-  }, {
-    "userInput": {
-      "isWebhookEnabled": true,
-      "input": {
-        "text": {
-          "text": "Heathrow London"
-        },
-        "languageCode": "en"
-      }
-    },
-    "virtualAgentOutput": {
-      "sessionParameters": {
-        "airport-codes": [ "London" ],
-        "arrival_airport": "London",
-        "departure_airport": "JFK\t",
-        "departure_city": [ "@airport-codes" ],
-        "departure_date": {
-          "day": 25,
-          "month": 12,
-          "year": 2021
-        },
-        "flight-type": [ "one-way" ]
-      },
-      "currentPage": {
-        "name": "Collect One-Way Ticket Information",
-        "flow": "Default Start Flow"
-      },
-      "textResponses": [ {
-        "text": [ "What time would you like to leave? Please use AM and PM in your response. " ]
-      } ],
-      "currentFlow": {
-        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
-        "displayName": "Default Start Flow"
-      }
-    }
-  }, {
-    "userInput": {
-      "isWebhookEnabled": true,
-      "input": {
-        "text": {
-          "text": "I don't know. any airport works"
-        },
-        "languageCode": "en"
-      }
-    },
-    "virtualAgentOutput": {
-      "sessionParameters": {
-        "airport-codes": [ "London" ],
-        "arrival_airport": "London",
-        "departure_airport": "JFK\t",
-        "departure_city": [ "@airport-codes" ],
-        "departure_date": {
-          "day": 25,
-          "month": 12,
-          "year": 2021
-        },
-        "flight-type": [ "one-way" ]
-      },
-      "currentPage": {
-        "name": "Collect One-Way Ticket Information",
-        "flow": "Default Start Flow"
-      },
-      "textResponses": [ {
-        "text": [ "What time would you like to leave? Please use AM and PM in your response. " ]
-      } ],
-      "currentFlow": {
-        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
-        "displayName": "Default Start Flow"
-      }
-    }
-  }, {
-    "userInput": {
-      "isWebhookEnabled": true,
-      "input": {
-        "text": {
-          "text": "I would like to leave at 5pm"
-        },
-        "languageCode": "en"
-      }
-    },
-    "virtualAgentOutput": {
-      "sessionParameters": {
-        "airport-codes": [ "London" ],
-        "arrival_airport": "London",
-        "departure_airport": "JFK\t",
-        "departure_city": [ "@airport-codes" ],
-        "departure_date": {
-          "day": 25,
-          "month": 12,
-          "year": 2021
+          "day": 20,
+          "month": 5,
+          "year": 2023
         },
         "flight-type": [ "one-way" ],
         "outbound_departure_time": {
-          "hours": 17,
+          "hours": 10,
           "minutes": 0,
           "nanos": 0,
           "seconds": 0
@@ -323,7 +154,7 @@
         "flow": "Default Start Flow"
       },
       "textResponses": [ {
-        "text": [ "What is the first  and last name of the passenger flying?" ]
+        "text": [ "what is your destination airport?" ]
       } ],
       "currentFlow": {
         "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
@@ -335,37 +166,115 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "Jane Doe"
+          "text": "Cancun"
         },
         "languageCode": "en"
       }
     },
     "virtualAgentOutput": {
       "sessionParameters": {
-        "airport-codes": [ "London" ],
-        "arrival_airport": "London",
-        "departure_airport": "JFK\t",
-        "departure_city": [ "@airport-codes" ],
+        "arrival_airport": "CUN",
+        "departure_airport": "HND",
         "departure_date": {
-          "day": 25,
-          "month": 12,
-          "year": 2021
+          "day": 20,
+          "month": 5,
+          "year": 2023
         },
         "flight-type": [ "one-way" ],
         "outbound_departure_time": {
-          "hours": 17,
+          "hours": 10,
+          "minutes": 0,
+          "nanos": 0,
+          "seconds": 0
+        }
+      },
+      "currentPage": {
+        "name": "Collect One-Way Ticket Information",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Great! Can you please provide the name of the passenger?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Michael Corleone"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_airport": "CUN",
+        "departure_airport": "HND",
+        "departure_date": {
+          "day": 20,
+          "month": 5,
+          "year": 2023
+        },
+        "flight-type": [ "one-way" ],
+        "outbound_departure_time": {
+          "hours": 10,
           "minutes": 0,
           "nanos": 0,
           "seconds": 0
         },
-        "passenger_name": "Jane Doe"
+        "passenger_name": "Michael Corleone"
+      },
+      "currentPage": {
+        "name": "Collect One-Way Ticket Information",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sounds good! Can you please provide an email address for the booking confirmation?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "michael@padrino.com"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_airport": "CUN",
+        "departure_airport": "HND",
+        "departure_date": {
+          "day": 20,
+          "month": 5,
+          "year": 2023
+        },
+        "flight-type": [ "one-way" ],
+        "outbound_departure_time": {
+          "hours": 10,
+          "minutes": 0,
+          "nanos": 0,
+          "seconds": 0
+        },
+        "passenger_email": "michael@padrino.com",
+        "passenger_name": "Michael Corleone"
       },
       "currentPage": {
         "name": "Confirm Flight Details One-Way Ticket",
         "flow": "Default Start Flow"
       },
       "textResponses": [ {
-        "text": [ "You want a one way ticket for:\n\nPassenger Jane Doe \n\nFrom JFK\t\n\nTo  London\n\nLeaving on 2021-12-25 \n\nTime 17:00:00\n\nIs that correct?\n" ]
+        "text": [ "This is to confirm that Michael Corleone will be flying from HND to CUN\n on 2023-05-20 at 10:00:00. Is that correct?" ]
       } ],
       "currentFlow": {
         "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
@@ -377,124 +286,177 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "i don't know"
+          "text": "yes"
         },
         "languageCode": "en"
       }
     },
     "virtualAgentOutput": {
       "sessionParameters": {
-        "airport-codes": [ "London" ],
-        "arrival_airport": "London",
-        "departure_airport": "JFK\t",
-        "departure_city": [ "@airport-codes" ],
+        "arrival_airport": "CUN",
+        "departure_airport": "HND",
         "departure_date": {
-          "day": 25,
-          "month": 12,
-          "year": 2021
+          "day": 20,
+          "month": 5,
+          "year": 2023
         },
         "flight-type": [ "one-way" ],
         "outbound_departure_time": {
-          "hours": 17,
+          "hours": 10,
           "minutes": 0,
           "nanos": 0,
           "seconds": 0
         },
-        "passenger_name": "Jane Doe"
-      },
-      "currentPage": {
-        "name": "Confirm Flight Details One-Way Ticket",
-        "flow": "Default Start Flow"
-      },
-      "textResponses": [ {
-        "text": [ "One more time?" ]
-      } ],
-      "currentFlow": {
-        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
-        "displayName": "Default Start Flow"
-      }
-    }
-  }, {
-    "userInput": {
-      "isWebhookEnabled": true,
-      "input": {
-        "text": {
-          "text": "do you sell international tickets?"
-        },
-        "languageCode": "en"
-      }
-    },
-    "virtualAgentOutput": {
-      "sessionParameters": {
-        "airport-codes": [ "London" ],
-        "arrival_airport": "London",
-        "departure_airport": "JFK\t",
-        "departure_city": [ "@airport-codes" ],
-        "departure_date": {
-          "day": 25,
-          "month": 12,
-          "year": 2021
-        },
-        "flight-type": [ "one-way" ],
-        "outbound_departure_time": {
-          "hours": 17,
-          "minutes": 0,
-          "nanos": 0,
-          "seconds": 0
-        },
-        "passenger_name": "Jane Doe"
-      },
-      "currentPage": {
-        "name": "Confirm Flight Details One-Way Ticket",
-        "flow": "Default Start Flow"
-      },
-      "textResponses": [ {
-        "text": [ "Sorry, what was that?" ]
-      } ],
-      "currentFlow": {
-        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
-        "displayName": "Default Start Flow"
-      }
-    }
-  }, {
-    "userInput": {
-      "isWebhookEnabled": true,
-      "input": {
-        "text": {
-          "text": "can I talk to a human"
-        },
-        "languageCode": "en"
-      }
-    },
-    "virtualAgentOutput": {
-      "sessionParameters": {
-        "airport-codes": [ "London" ],
-        "arrival_airport": "London",
-        "departure_airport": "JFK\t",
-        "departure_city": [ "@airport-codes" ],
-        "departure_date": {
-          "day": 25,
-          "month": 12,
-          "year": 2021
-        },
-        "flight-type": [ "one-way" ],
-        "outbound_departure_time": {
-          "hours": 17,
-          "minutes": 0,
-          "nanos": 0,
-          "seconds": 0
-        },
-        "passenger_name": "Jane Doe"
+        "passenger_email": "michael@padrino.com",
+        "passenger_name": "Michael Corleone"
       },
       "triggeredIntent": {
-        "name": "flights.customer_service"
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Show One-Way Available Flights",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thank you for that information. Let me check if we have a flight available. " ]
+      }, {
+        "text": [ "Option A\nDeparture Flight $session.params.flight_number_A\nDate 2023-05-20\nDeparture Airport HND\nTime  $session.params.departure_time_A\nArrival Airport CUN\nArrival Time $session.params.arrival_time_A \n\nOption B\nDeparture Flight $session.params.flight_number_B \nDate 2023-05-20\nDeparture Airport HND\nTime  $session.params.departure_time_B\nArrival Airport CUN\nArrival Time $session.params.arrival_time_B  \n\nOption C\nDeparture Flight $session.params.flight_number_C\nDate 2023-05-20\nDeparture Airport HND\nTime $session.params.departure_time_C\nArrival Airport CUN\nArrival Time $session.params.arrival_time_C" ]
+      }, {
+        "text": [ "Would you like to book Option A, Option B, or Option C?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "A"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_airport": "CUN",
+        "departure_airport": "HND",
+        "departure_date": {
+          "day": 20,
+          "month": 5,
+          "year": 2023
+        },
+        "flight-type": [ "one-way" ],
+        "flight_option": "Option A",
+        "outbound_departure_time": {
+          "hours": 10,
+          "minutes": 0,
+          "nanos": 0,
+          "seconds": 0
+        },
+        "passenger_email": "michael@padrino.com",
+        "passenger_name": "Michael Corleone"
+      },
+      "currentPage": {
+        "name": "Display Selected One-Way Ticket",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "All of our seats are open seating.  Family passengers with children under 5 are boarded first to allow families to sit together. " ]
+      }, {
+        "text": [ "[Below is a sample response with static data and filled parameters. Unfilled parameters will need a real time webhook response]\n\nDeparture Flight RLABKB\nDate 2023-05-20\nDeparture Airport HND\nTime $session.params.departure_time_C\nArrival Airport CUN\nArrival Time $session.params.arrival_time_C\n\nThe price for this ticket is $session.params.ticket_price\n\nWould you like to proceed with payment?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "Not today"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_airport": "CUN",
+        "departure_airport": "HND",
+        "departure_date": {
+          "day": 20,
+          "month": 5,
+          "year": 2023
+        },
+        "flight-type": [ "one-way" ],
+        "flight_option": "Option A",
+        "outbound_departure_time": {
+          "hours": 10,
+          "minutes": 0,
+          "nanos": 0,
+          "seconds": 0
+        },
+        "passenger_email": "michael@padrino.com",
+        "passenger_name": "Michael Corleone"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
+      },
+      "currentPage": {
+        "name": "Anything Else",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Would you like help with anything else?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "no thanks"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_airport": "CUN",
+        "departure_airport": "HND",
+        "departure_date": {
+          "day": 20,
+          "month": 5,
+          "year": 2023
+        },
+        "flight-type": [ "one-way" ],
+        "flight_option": "Option A",
+        "outbound_departure_time": {
+          "hours": 10,
+          "minutes": 0,
+          "nanos": 0,
+          "seconds": 0
+        },
+        "passenger_email": "michael@padrino.com",
+        "passenger_name": "Michael Corleone"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.no"
       },
       "currentPage": {
         "name": "End Session",
         "flow": "Default Start Flow"
       },
       "textResponses": [ {
-        "text": [ "Please hold while I transfer you to a live person." ]
+        "text": [ "We thank you for your business. Have a great day!\n" ]
       } ],
       "currentFlow": {
         "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
@@ -503,7 +465,11 @@
     }
   } ],
   "creationTime": {
-    "seconds": 1607019586,
-    "nanos": 139421000
+    "seconds": 1683058958,
+    "nanos": 625035000
+  },
+  "testConfig": {
+    "flow": "Default Start Flow",
+    "page": "Start Page"
   }
 }

@@ -1,6 +1,62 @@
 {
   "trainingPhrases": [ {
     "parts": [ {
+      "text": "I would like a "
+    }, {
+      "text": "one-way",
+      "parameterId": "flight_type"
+    }, {
+      "text": " flight from "
+    }, {
+      "text": "Montreal",
+      "parameterId": "departure_city",
+      "auto": true
+    }, {
+      "text": " to "
+    }, {
+      "text": "San Francisco",
+      "parameterId": "arrival_city",
+      "auto": true
+    }, {
+      "text": " on "
+    }, {
+      "text": "September 24th",
+      "parameterId": "departure_date",
+      "auto": true
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
+      "text": "Can you help me find a "
+    }, {
+      "text": "one-way",
+      "parameterId": "flight_type",
+      "auto": true
+    }, {
+      "text": " flight from "
+    }, {
+      "text": "New york",
+      "parameterId": "departure_city"
+    }, {
+      "text": " to "
+    }, {
+      "text": "Cancun",
+      "parameterId": "arrival_city"
+    }, {
+      "text": " on "
+    }, {
+      "text": "May 15th",
+      "parameterId": "departure_date"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "en"
+  }, {
+    "parts": [ {
       "text": "flight let me get a flight",
       "auto": true
     } ],

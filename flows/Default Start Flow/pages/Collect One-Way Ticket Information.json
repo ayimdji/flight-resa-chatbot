@@ -31,7 +31,7 @@
         "initialPromptFulfillment": {
           "messages": [ {
             "text": {
-              "text": [ "Which airport would you like to fly out of?" ]
+              "text": [ "Which airport would you like to fly out of?", "Okay, where will you be departing from?" ]
             },
             "languageCode": "en"
           } ],
@@ -61,6 +61,32 @@
           },
           "name": "385ea02b-10b5-4949-b1dd-c4586cd0b08a"
         } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    }, {
+      "displayName": "outbound_departure_time",
+      "required": true,
+      "entityType": "@sys.time",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "What time would you like to leave? Please use AM and PM in your response. ", "What’s your preferred departure time? \nPlease use AM and PM in your response. " ]
+            },
+            "languageCode": "en"
+          } ],
+          "webhook": "Apigee Integration",
+          "tag": "findAvailableTicket"
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
       }
     }, {
       "displayName": "arrival_airport",
@@ -70,7 +96,7 @@
         "initialPromptFulfillment": {
           "messages": [ {
             "text": {
-              "text": [ "Which airport are you flying into?" ]
+              "text": [ "Which airport are you flying into?", "what is your destination airport?" ]
             },
             "languageCode": "en"
           } ],
@@ -100,22 +126,6 @@
           },
           "name": "cc587af5-c361-44e2-9c02-497316821d05"
         } ]
-      }
-    }, {
-      "displayName": "outbound_departure_time",
-      "required": true,
-      "entityType": "@sys.time",
-      "fillBehavior": {
-        "initialPromptFulfillment": {
-          "messages": [ {
-            "text": {
-              "text": [ "What time would you like to leave? Please use AM and PM in your response. ", "What’s your preferred departure time? \nPlease use AM and PM in your response. " ]
-            },
-            "languageCode": "en"
-          } ],
-          "webhook": "Apigee Integration",
-          "tag": "findAvailableTicket"
-        }
       },
       "advancedSettings": {
         "dtmfSettings": {

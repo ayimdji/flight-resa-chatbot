@@ -1,28 +1,28 @@
 {
-  "name": "fd24d64a-7cd6-46f9-b290-aba726f410c4",
-  "displayName": "Happy path - Check one way - Don't select option",
+  "name": "a12946f5-f9e4-4019-b6ad-1bfc52358388",
+  "displayName": "Conversation 2 - Happy path - Check one way ticket - End to end",
   "testCaseConversationTurns": [ {
     "userInput": {
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "one way ticket pls"
+          "text": "Hi, I need to book a flight"
         },
         "languageCode": "en"
       }
     },
     "virtualAgentOutput": {
       "triggeredIntent": {
-        "name": "flights.one_way_ticket"
+        "name": "flights.book_flight"
       },
       "currentPage": {
-        "name": "Collect One-Way Ticket Information",
+        "name": "Select Ticket Type",
         "flow": "Default Start Flow"
       },
       "textResponses": [ {
-        "text": [ "Let's find a one-way ticket for you. " ]
+        "text": [ "I can help you find a ticket. Let's get started." ]
       }, {
-        "text": [ "Which day would you like to leave?" ]
+        "text": [ "Do you want a round-trip or one-way ticket?" ]
       } ],
       "currentFlow": {
         "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
@@ -34,7 +34,38 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "Dec 24"
+          "text": "one way"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "flight-type": [ "one-way" ]
+      },
+      "triggeredIntent": {
+        "name": "flights.one_way_ticket"
+      },
+      "currentPage": {
+        "name": "Collect One-Way Ticket Information",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Great! Let's find a one-way ticket for you. " ]
+      }, {
+        "text": [ "Which date do you want to fly?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "On July 10th"
         },
         "languageCode": "en"
       }
@@ -42,10 +73,11 @@
     "virtualAgentOutput": {
       "sessionParameters": {
         "departure_date": {
-          "day": 24,
-          "month": 12,
-          "year": 2020
-        }
+          "day": 10,
+          "month": 7,
+          "year": 2023
+        },
+        "flight-type": [ "one-way" ]
       },
       "currentPage": {
         "name": "Collect One-Way Ticket Information",
@@ -64,18 +96,57 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "Houston"
+          "text": "Montreal"
         },
         "languageCode": "en"
       }
     },
     "virtualAgentOutput": {
       "sessionParameters": {
-        "departure_airport": "IAH\t",
+        "departure_airport": "YUL",
         "departure_date": {
-          "day": 24,
-          "month": 12,
-          "year": 2020
+          "day": 10,
+          "month": 7,
+          "year": 2023
+        },
+        "flight-type": [ "one-way" ]
+      },
+      "currentPage": {
+        "name": "Collect One-Way Ticket Information",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "What time would you like to leave? Please use AM and PM in your response. " ]
+      } ],
+      "currentFlow": {
+        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "10 am"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "departure_airport": "YUL",
+        "departure_date": {
+          "day": 10,
+          "month": 7,
+          "year": 2023
+        },
+        "flight-type": [ "one-way" ],
+        "outbound_departure_time": {
+          "hours": 10,
+          "minutes": 0,
+          "nanos": 0,
+          "seconds": 0
         }
       },
       "currentPage": {
@@ -95,52 +166,21 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "Chicago"
+          "text": "Brussels"
         },
         "languageCode": "en"
       }
     },
     "virtualAgentOutput": {
       "sessionParameters": {
-        "arrival_airport": "MDW\t",
-        "departure_airport": "IAH\t",
+        "arrival_airport": "BRU",
+        "departure_airport": "YUL",
         "departure_date": {
-          "day": 24,
-          "month": 12,
-          "year": 2020
-        }
-      },
-      "currentPage": {
-        "name": "Collect One-Way Ticket Information",
-        "flow": "Default Start Flow"
-      },
-      "textResponses": [ {
-        "text": [ "What time would you like to leave? Please use AM and PM in your response. " ]
-      } ],
-      "currentFlow": {
-        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
-        "displayName": "Default Start Flow"
-      }
-    }
-  }, {
-    "userInput": {
-      "isWebhookEnabled": true,
-      "input": {
-        "text": {
-          "text": "10am"
+          "day": 10,
+          "month": 7,
+          "year": 2023
         },
-        "languageCode": "en"
-      }
-    },
-    "virtualAgentOutput": {
-      "sessionParameters": {
-        "arrival_airport": "MDW\t",
-        "departure_airport": "IAH\t",
-        "departure_date": {
-          "day": 24,
-          "month": 12,
-          "year": 2020
-        },
+        "flight-type": [ "one-way" ],
         "outbound_departure_time": {
           "hours": 10,
           "minutes": 0,
@@ -165,34 +205,76 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "Jane Doe"
+          "text": "John Doe"
         },
         "languageCode": "en"
       }
     },
     "virtualAgentOutput": {
       "sessionParameters": {
-        "arrival_airport": "MDW\t",
-        "departure_airport": "IAH\t",
+        "arrival_airport": "BRU",
+        "departure_airport": "YUL",
         "departure_date": {
-          "day": 24,
-          "month": 12,
-          "year": 2020
+          "day": 10,
+          "month": 7,
+          "year": 2023
         },
+        "flight-type": [ "one-way" ],
         "outbound_departure_time": {
           "hours": 10,
           "minutes": 0,
           "nanos": 0,
           "seconds": 0
         },
-        "passenger_name": "Jane Doe"
+        "passenger_name": "John Doe"
+      },
+      "currentPage": {
+        "name": "Collect One-Way Ticket Information",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Sounds good! Can you please provide an email address for the booking confirmation?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "john.doe@gmail.com"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_airport": "BRU",
+        "departure_airport": "YUL",
+        "departure_date": {
+          "day": 10,
+          "month": 7,
+          "year": 2023
+        },
+        "flight-type": [ "one-way" ],
+        "outbound_departure_time": {
+          "hours": 10,
+          "minutes": 0,
+          "nanos": 0,
+          "seconds": 0
+        },
+        "passenger_email": "john.doe@gmail.com",
+        "passenger_name": "John Doe"
       },
       "currentPage": {
         "name": "Confirm Flight Details One-Way Ticket",
         "flow": "Default Start Flow"
       },
       "textResponses": [ {
-        "text": [ "You want a one way ticket for:\n\nPassenger Jane Doe \n\nFrom IAH\t\n\nTo  MDW\t\n\nLeaving on 2020-12-24 \n\nTime 10:00:00\n\nIs that correct?\n" ]
+        "text": [ "You want a one way ticket for:\n\nPassenger John Doe \n\nFrom YUL\n\nTo  BRU\n\nLeaving on 2023-07-10 \n\nTime 10:00:00\n\nIs that correct?\n" ]
       } ],
       "currentFlow": {
         "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
@@ -211,20 +293,22 @@
     },
     "virtualAgentOutput": {
       "sessionParameters": {
-        "arrival_airport": "MDW\t",
-        "departure_airport": "IAH\t",
+        "arrival_airport": "BRU",
+        "departure_airport": "YUL",
         "departure_date": {
-          "day": 24,
-          "month": 12,
-          "year": 2020
+          "day": 10,
+          "month": 7,
+          "year": 2023
         },
+        "flight-type": [ "one-way" ],
         "outbound_departure_time": {
           "hours": 10,
           "minutes": 0,
           "nanos": 0,
           "seconds": 0
         },
-        "passenger_name": "Jane Doe"
+        "passenger_email": "john.doe@gmail.com",
+        "passenger_name": "John Doe"
       },
       "triggeredIntent": {
         "name": "small_talk.confirmation.yes"
@@ -236,7 +320,7 @@
       "textResponses": [ {
         "text": [ "Thank you for that information. Let me check if we have a flight available. " ]
       }, {
-        "text": [ "Option A\nDeparture Flight $session.params.flight_number_A\nDate 2020-12-24\nDeparture Airport IAH\t\nTime  $session.params.departure_time_A\nArrival Airport MDW\t\nArrival Time $session.params.arrival_time_A \n\nOption B\nDeparture Flight $session.params.flight_number_B \nDate 2020-12-24\nDeparture Airport IAH\t\nTime  $session.params.departure_time_B\nArrival Airport MDW\t\nArrival Time $session.params.arrival_time_B  \n\nOption C\nDeparture Flight $session.params.flight_number_C\nDate 2020-12-24\nDeparture Airport IAH\t\nTime $session.params.departure_time_C\nArrival Airport MDW\t\nArrival Time $session.params.arrival_time_C" ]
+        "text": [ "Option A\nDeparture Flight $session.params.flight_number_A\nDate 2023-07-10\nDeparture Airport YUL\nTime  $session.params.departure_time_A\nArrival Airport BRU\nArrival Time $session.params.arrival_time_A \n\nOption B\nDeparture Flight $session.params.flight_number_B \nDate 2023-07-10\nDeparture Airport YUL\nTime  $session.params.departure_time_B\nArrival Airport BRU\nArrival Time $session.params.arrival_time_B  \n\nOption C\nDeparture Flight $session.params.flight_number_C\nDate 2023-07-10\nDeparture Airport YUL\nTime $session.params.departure_time_C\nArrival Airport BRU\nArrival Time $session.params.arrival_time_C" ]
       }, {
         "text": [ "Would you like to book Option A, Option B, or Option C?" ]
       } ],
@@ -250,81 +334,39 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "no thanx I was just checking"
+          "text": "C"
         },
         "languageCode": "en"
       }
     },
     "virtualAgentOutput": {
       "sessionParameters": {
-        "arrival_airport": "MDW\t",
-        "departure_airport": "IAH\t",
+        "arrival_airport": "BRU",
+        "departure_airport": "YUL",
         "departure_date": {
-          "day": 24,
-          "month": 12,
-          "year": 2020
+          "day": 10,
+          "month": 7,
+          "year": 2023
         },
+        "flight-type": [ "one-way" ],
+        "flight_option": "Option C",
         "outbound_departure_time": {
           "hours": 10,
           "minutes": 0,
           "nanos": 0,
           "seconds": 0
         },
-        "passenger_name": "Jane Doe"
-      },
-      "triggeredIntent": {
-        "name": "small_talk.confirmation.no"
+        "passenger_email": "john.doe@gmail.com",
+        "passenger_name": "John Doe"
       },
       "currentPage": {
-        "name": "Anything Else",
+        "name": "Display Selected One-Way Ticket",
         "flow": "Default Start Flow"
       },
       "textResponses": [ {
-        "text": [ "Would you like help with anything else?" ]
-      } ],
-      "currentFlow": {
-        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
-        "displayName": "Default Start Flow"
-      }
-    }
-  }, {
-    "userInput": {
-      "isWebhookEnabled": true,
-      "input": {
-        "text": {
-          "text": "do you have discounts for seniors?"
-        },
-        "languageCode": "en"
-      }
-    },
-    "virtualAgentOutput": {
-      "sessionParameters": {
-        "arrival_airport": "MDW\t",
-        "departure_airport": "IAH\t",
-        "departure_date": {
-          "day": 24,
-          "month": 12,
-          "year": 2020
-        },
-        "outbound_departure_time": {
-          "hours": 10,
-          "minutes": 0,
-          "nanos": 0,
-          "seconds": 0
-        },
-        "passenger_name": "Jane Doe"
-      },
-      "triggeredIntent": {
-        "name": "flights.senior_discount"
-      },
-      "currentPage": {
-        "name": "Anything Else",
-        "flow": "Default Start Flow"
-      },
-      "textResponses": [ {
-        "text": [ "Passengers over 55 receive a 15% discount with the use of a pre-validated ID. \n\nThe ID must be shown to an employee at the airport in order for the discount to be applied to the account. \n\nThe discount is only valid for the name listed on the validated senior's ID." ]
+        "text": [ "All of our seats are open seating.  Family passengers with children under 5 are boarded first to allow families to sit together. " ]
       }, {
-        "text": [ "Would you like help with anything else?" ]
+        "text": [ "[Below is a sample response with static data and filled parameters. Unfilled parameters will need a real time webhook response]\n\nDeparture Flight RLABKB\nDate 2023-07-10\nDeparture Airport YUL\nTime $session.params.departure_time_C\nArrival Airport BRU\nArrival Time $session.params.arrival_time_C\n\nThe price for this ticket is $session.params.ticket_price\n\nWould you like to proceed with payment?" ]
       } ],
       "currentFlow": {
         "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
@@ -336,27 +378,77 @@
       "isWebhookEnabled": true,
       "input": {
         "text": {
-          "text": "ok thanx"
+          "text": "yes"
         },
         "languageCode": "en"
       }
     },
     "virtualAgentOutput": {
       "sessionParameters": {
-        "arrival_airport": "MDW\t",
-        "departure_airport": "IAH\t",
+        "arrival_airport": "BRU",
+        "departure_airport": "YUL",
         "departure_date": {
-          "day": 24,
-          "month": 12,
-          "year": 2020
+          "day": 10,
+          "month": 7,
+          "year": 2023
         },
+        "flight-type": [ "one-way" ],
+        "flight_option": "Option C",
         "outbound_departure_time": {
           "hours": 10,
           "minutes": 0,
           "nanos": 0,
           "seconds": 0
         },
-        "passenger_name": "Jane Doe"
+        "passenger_email": "john.doe@gmail.com",
+        "passenger_name": "John Doe"
+      },
+      "triggeredIntent": {
+        "name": "small_talk.confirmation.yes"
+      },
+      "currentPage": {
+        "name": "Anything Else",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Thank you. I have booked your flight departing from YUL to BRU on 2023-07-10.\nYour reservation number is EFG435. \nYour confirmation details have been sent to john.doe@gmail.com." ]
+      }, {
+        "text": [ "Can I help you with anything else?" ]
+      } ],
+      "currentFlow": {
+        "name": "projects/quantify-test/locations/us-central1/agents/02e57fe4-2e5a-46ca-987d-f9db155c5ceb/flows/00000000-0000-0000-0000-000000000000",
+        "displayName": "Default Start Flow"
+      }
+    }
+  }, {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "No that's all"
+        },
+        "languageCode": "en"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "arrival_airport": "BRU",
+        "departure_airport": "YUL",
+        "departure_date": {
+          "day": 10,
+          "month": 7,
+          "year": 2023
+        },
+        "flight-type": [ "one-way" ],
+        "flight_option": "Option C",
+        "outbound_departure_time": {
+          "hours": 10,
+          "minutes": 0,
+          "nanos": 0,
+          "seconds": 0
+        },
+        "passenger_email": "john.doe@gmail.com",
+        "passenger_name": "John Doe"
       },
       "triggeredIntent": {
         "name": "small_talk.thanks"
@@ -375,7 +467,11 @@
     }
   } ],
   "creationTime": {
-    "seconds": 1606951943,
-    "nanos": 823179000
+    "seconds": 1683054936,
+    "nanos": 456802000
+  },
+  "testConfig": {
+    "flow": "Default Start Flow",
+    "page": "Start Page"
   }
 }

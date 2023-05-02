@@ -17,7 +17,7 @@
     "triggerFulfillment": {
       "messages": [ {
         "text": {
-          "text": [ "Thank you. I have booked your flight departing from $.session.params.departure_airport on $.session.params.departure_date and returning from $.session.params. return_airport on $.session.params.return_date. \nYour reservation number is ABC123. \nYour confirmation details have been sent to $.session.params.email." ]
+          "text": [ "Thank you. I have booked your flight departing from $session.params.departure_airport to $session.params.return_airport on $session.params.departure_date and returning from $session.params.return_airport on $session.params.return_date. \nYour reservation number is ABC123. \nYour confirmation details have been sent to $session.params.passenger_email." ]
         },
         "languageCode": "en"
       } ]
