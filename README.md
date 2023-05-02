@@ -1,2 +1,2 @@
-# flight-resa-chatbot
+# flight reservation chatbot
 Flight Booking Conversational Agent
